@@ -4,23 +4,29 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CaelumEstoque.DAO;
+using CaelumEstoque.Filtros;
 using CaelumEstoque.Models;
 
 namespace CaelumEstoque.Controllers
 {
+    [AutorizacaoFilter]
     public class ProdutoController : Controller
     {
         //
         // GET: /Produto/
 
-        [Route("produtos", Name ="ListaProdutos")]
+        [Route("produtos", Name = "ListaProdutos")]
+
         public ActionResult Index()
         {
+
             ProdutosDAO dao = new ProdutosDAO();
             IList<Produto> produtos = dao.Lista();
             return View(produtos);
+
         }
-        
+
+
         public ActionResult Form()
         {
             CategoriasDAO dao = new CategoriasDAO();
@@ -31,19 +37,20 @@ namespace CaelumEstoque.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Adiciona(Produto produto)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 int idDaInformatica = 1;
-                if(produto.CategoriaId.Equals(idDaInformatica) && produto.Preco < 100)
+                if (produto.CategoriaId.Equals(idDaInformatica) && produto.Preco < 100)
                 {
                     ModelState.AddModelError("produtoInformatica.Invalido", "Informática com preço abaixo de R$100,00");
                 }
                 ProdutosDAO dao = new ProdutosDAO();
                 dao.Adiciona(produto);
 
-                return RedirectToAction("Index"); 
+                return RedirectToAction("Index");
             }
             else
             {
@@ -54,7 +61,7 @@ namespace CaelumEstoque.Controllers
             }
         }
 
-        [Route("produtos/{id}", Name ="VisualizaProduto")]
+        [Route("produtos/{id}", Name = "VisualizaProduto")]
         public ActionResult Visualiza(int id)
         {
             ProdutosDAO dao = new ProdutosDAO();

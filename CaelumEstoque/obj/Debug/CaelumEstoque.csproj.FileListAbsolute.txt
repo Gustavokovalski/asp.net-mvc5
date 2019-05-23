@@ -91,3 +91,4 @@ C:\Users\gsaporiti\Desktop\git\aps.net-mvc5\asp.net-mvc5\CaelumEstoque\obj\Debug
 \\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\CaelumEstoque\obj\Debug\CaelumEstoque.dll
 \\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\CaelumEstoque\obj\Debug\CaelumEstoque.pdb
 \\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\CaelumEstoque\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\gsaporiti\Desktop\git\aps.net-mvc5\asp.net-mvc5\CaelumEstoque\bin\Microsoft.Web.Infrastructure.dll
