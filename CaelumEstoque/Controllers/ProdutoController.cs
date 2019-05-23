@@ -10,21 +10,23 @@ namespace CaelumEstoque.Controllers
 {
     public class ProdutoController : Controller
     {
-        // GET: Produto
+        //
+        // GET: /Produto/
+
+        [Route("produtos", Name ="ListaProdutos")]
         public ActionResult Index()
         {
             ProdutosDAO dao = new ProdutosDAO();
             IList<Produto> produtos = dao.Lista();
-            ViewBag.Produtos = produtos;
-            return View();
+            return View(produtos);
         }
         
         public ActionResult Form()
         {
-            CategoriasDAO categoriasDAO = new CategoriasDAO();
-            IList<CategoriaDoProduto> categorias = categoriasDAO.Lista();
-            ViewBag.Categorias = categorias;
+            CategoriasDAO dao = new CategoriasDAO();
+            IList<CategoriaDoProduto> categorias = dao.Lista();
             ViewBag.Produto = new Produto();
+            ViewBag.Categorias = categorias;
             return View();
         }
 
@@ -36,7 +38,7 @@ namespace CaelumEstoque.Controllers
                 int idDaInformatica = 1;
                 if(produto.CategoriaId.Equals(idDaInformatica) && produto.Preco < 100)
                 {
-                    ModelState.AddModelError("produto.Invalido", "Informática com preço abaixo de R$100,00");
+                    ModelState.AddModelError("produtoInformatica.Invalido", "Informática com preço abaixo de R$100,00");
                 }
                 ProdutosDAO dao = new ProdutosDAO();
                 dao.Adiciona(produto);
@@ -50,6 +52,15 @@ namespace CaelumEstoque.Controllers
                 ViewBag.Categorias = categoriasDAO.Lista();
                 return View("Form");
             }
+        }
+
+        [Route("produtos/{id}", Name ="VisualizaProduto")]
+        public ActionResult Visualiza(int id)
+        {
+            ProdutosDAO dao = new ProdutosDAO();
+            Produto produto = dao.BuscaPorId(id);
+            ViewBag.Produto = produto;
+            return View();
         }
     }
 }
