@@ -1,5 +1,5 @@
 
-# ASP.NET Core MVC com controllers e views
+# ASP.NET Core MVC
 Desenvolvimento mini projeto de estoque (EstoqueCaelum) para fixação de conhecimento 
 
  - Introdução ao ASP.NET MVC
