@@ -1,10 +1,13 @@
 ﻿using ControleFinancas.DAO;
 using ControleFinancas.Entidades;
+using ControleFinancas.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
+using WebMatrix.WebData;
 
 namespace ControleFinancas.Controllers
 {
@@ -23,16 +26,25 @@ namespace ControleFinancas.Controllers
             return View();
         }
 
-        public ActionResult Adiciona(Usuario usuario)
+        public ActionResult Adiciona(UsuarioModel model)
         {
             if (ModelState.IsValid)
             {
-                usuarioDAO.Adiciona(usuario);
-                return RedirectToAction("Index");
+                try
+                {
+                    WebSecurity.CreateUserAndAccount(model.Nome, model.Senha,
+                        new { Email = model.Email });
+                    return RedirectToAction("Index");
+                }
+                catch (MembershipCreateUserException e)
+                {
+                    ModelState.AddModelError("usuario.Invalido", e.Message);
+                    return View("Form", model);
+                }
             }
             else
             {
-                return View("Form", usuario);
+                return View("Form", model);
             }
         }
         public ActionResult Index()

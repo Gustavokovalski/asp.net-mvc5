@@ -97,3 +97,7 @@
 \\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\ControleFinancas\ControleFinancas\bin\pt-br\System.Net.Http.Formatting.resources.dll
 \\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\ControleFinancas\ControleFinancas\bin\pt-br\System.Web.Http.resources.dll
 \\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\ControleFinancas\ControleFinancas\bin\pt-br\System.Web.Http.WebHost.resources.dll
+\\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\ControleFinancas\ControleFinancas\bin\WebMatrix.Data.dll
+\\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\ControleFinancas\ControleFinancas\bin\WebMatrix.WebData.dll
+\\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\ControleFinancas\ControleFinancas\bin\WebMatrix.WebData.xml
+\\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\ControleFinancas\ControleFinancas\bin\WebMatrix.Data.xml
