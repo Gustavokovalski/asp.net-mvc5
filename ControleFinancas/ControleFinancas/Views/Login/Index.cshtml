@@ -1,6 +1,8 @@
 ﻿
 
 <form action="@Url.Action("Autentica") method="post">
+    @Html.ValidationMessage("login.Invalido")
+    
     <label for="login">Login:</label>
     <input id="login" name="login" type="text" class="form-control" />
 
