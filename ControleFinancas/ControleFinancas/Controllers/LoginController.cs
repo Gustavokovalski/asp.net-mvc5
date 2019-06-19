@@ -7,22 +7,22 @@ using WebMatrix.WebData;
 
 namespace ControleFinancas.Controllers
 {
+
     public class LoginController : Controller
     {
-        // GET: Login
         public ActionResult Index()
         {
             return View();
         }
+
         public ActionResult Autentica(String login, String senha)
         {
             if (WebSecurity.Login(login, senha))
             {
-                return RedirectToAction("Index" , "Movimentacao");
+                return RedirectToAction("Index", "Movimentacao");
             }
             else
             {
-                ModelState.AddModelError("login.Invalido", "Login ou senha incorretos");
                 return View("Index");
             }
         }
@@ -32,6 +32,5 @@ namespace ControleFinancas.Controllers
             WebSecurity.Logout();
             return RedirectToAction("Index");
         }
-
     }
 }

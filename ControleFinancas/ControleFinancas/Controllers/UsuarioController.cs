@@ -20,10 +20,14 @@ namespace ControleFinancas.Controllers
             this.usuarioDAO = usuarioDAO;
         }
 
-        // GET: Usuario
         public ActionResult Form()
         {
             return View();
+        }
+
+        public ActionResult Index()
+        {
+            return View(usuarioDAO.Lista());
         }
 
         public ActionResult Adiciona(UsuarioModel model)
@@ -46,11 +50,6 @@ namespace ControleFinancas.Controllers
             {
                 return View("Form", model);
             }
-        }
-        public ActionResult Index()
-        {
-            IList<Usuario> usuarios = usuarioDAO.Lista();
-            return View(usuarios);
         }
     }
 }
