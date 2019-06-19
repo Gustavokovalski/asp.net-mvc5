@@ -51,5 +51,14 @@ namespace ControleFinancas.Controllers
             model.Movimentacoes = movimentacaoDAO.BuscaPorUsuario(model.UsuarioId);
             return View(model);
         }
+
+        public ActionResult Busca(BuscaMovimentacoesModel model)
+        {
+            model.Usuarios = usuarioDAO.Lista();
+            model.Movimentacoes = movimentacaoDAO.Busca(model.ValorMinimo, model.ValorMaximo,
+                                                        model.DataMinima, model.DataMaxima,
+                                                        model.Tipo, model.UsuarioId);
+            return View(model);
+        }
     }
 }
