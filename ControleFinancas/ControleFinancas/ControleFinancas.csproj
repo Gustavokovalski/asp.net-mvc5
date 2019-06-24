@@ -43,6 +43,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Csla, Version=4.11.0.0, Culture=neutral, PublicKeyToken=93be5fdc093e4c30, processorArchitecture=MSIL">
+      <HintPath>..\packages\CSLA-Core.4.11.0\lib\net461\Csla.dll</HintPath>
+    </Reference>
+    <Reference Include="Csla.Web, Version=4.11.0.0, Culture=neutral, PublicKeyToken=93be5fdc093e4c30, processorArchitecture=MSIL">
+      <HintPath>..\packages\CSLA-ASP.NET.4.11.0\lib\net461\Csla.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Csla.Web.Mvc4, Version=4.11.0.0, Culture=neutral, PublicKeyToken=93be5fdc093e4c30, processorArchitecture=MSIL">
+      <HintPath>..\packages\CSLA-ASP.NET-MVC4.4.11.0\lib\net461\Csla.Web.Mvc4.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -196,7 +205,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Analyzer Include="..\packages\CSLA-Core.4.11.0\analyzers\c#\Csla.Analyzers.dll" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201906121303589_TabelasIniciais.resx">
       <DependentUpon>201906121303589_TabelasIniciais.cs</DependentUpon>
