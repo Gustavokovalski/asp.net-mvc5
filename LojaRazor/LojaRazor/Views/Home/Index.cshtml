@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
     <head>
-        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap/css/bootstrap.css" rel="stylesheet" />
         <link href="~/Content/Style.css" rel="stylesheet" />
     </head>
     <body>
@@ -11,8 +11,22 @@
                 <ul class="nav">
                     <li>@Html.ActionLink("Sobre", "About", "Home")</li>
                     <li>@Html.ActionLink("Contato","Contato", "Home")</li>
-
                 </ul>
+                <p class="navbar-text pull-right">
+                   @if(Session["usuarioLogado"] != null)
+                   {
+                       @:Bem-Vindo 
+                       @Session["usuarioLogado"]
+                       @Html.ActionLink("Logout", "Logout", "Autenticacao")
+                   }
+                   else
+                   {
+                       @:Ola Visitante
+                       @Html.ActionLink("Login", "Index", "Autenticacao")
+                       @: ou 
+                       @Html.ActionLink("Cadastre-se", "Form", "Usuarios")
+                   }
+                </p>
             </div>
         </div>
         <div class="container-fluid">
