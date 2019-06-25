@@ -164,3 +164,8 @@ C:\Users\TC824771\source\repos\LojaRazor\LojaRazor\obj\Debug\LojaRazor.pdb
 \\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\LojaRazor\LojaRazor\obj\Debug\LojaRazor.csproj.CopyComplete
 \\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\LojaRazor\LojaRazor\obj\Debug\LojaRazor.dll
 \\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\LojaRazor\LojaRazor\obj\Debug\LojaRazor.pdb
+\\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\LojaRazor\LojaRazor\bin\en-us\LojaRazor.resources.dll
+\\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\LojaRazor\LojaRazor\obj\Debug\LojaRazor.Internacionalizacao.Mensagens.resources
+\\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\LojaRazor\LojaRazor\obj\Debug\LojaRazor.Internacionalizacao.Mensagens.en-us.resources
+\\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\LojaRazor\LojaRazor\obj\Debug\LojaRazor.csproj.GenerateResource.cache
+\\tcprofiles\usersprofiles$\TC824771\Documents\git\asp.net-mvc5\asp.net-mvc5\LojaRazor\LojaRazor\obj\Debug\en-us\LojaRazor.resources.dll
